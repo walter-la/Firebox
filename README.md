@@ -43,6 +43,6 @@ The code is separated into small components located in `src/components` and cust
 - **Player.jsx** – handles pointer lock and keyboard movement.
 - **Gun.jsx** – simple gun model attached to the camera.
 - **Bullets.jsx** – renders active bullets.
-- **useBullets.js** – stores bullet state and shooting logic.
+- **useBullets.jsx** – stores bullet state and shooting logic.
 
 Feel free to modify the scene, add models or effects.
