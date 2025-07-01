@@ -9,7 +9,11 @@ import { BulletProvider } from './hooks/useBullets.jsx';
 
 export default function App() {
   return (
-    <Canvas shadows camera={{ fov: 75 }}>
+    <Canvas
+      shadows
+      camera={{ fov: 75, position: [0, 1, 0] }}
+      style={{ width: '100%', height: '100%' }}
+    >
       <Suspense fallback={null}>
         <BulletProvider>
           <color attach="background" args={[0.6, 0.7, 0.9]} />

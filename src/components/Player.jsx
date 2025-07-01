@@ -10,6 +10,11 @@ export default function Player() {
   const keys = usePlayerControls();
   const { shoot } = useBullets();
 
+  // Set initial camera height for a more natural viewpoint
+  useEffect(() => {
+    camera.position.y = 1;
+  }, [camera]);
+
   useFrame((state, delta) => {
     if (!controlsRef.current?.isLocked) return;
     const speed = 5;
