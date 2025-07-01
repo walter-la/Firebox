@@ -9,9 +9,9 @@ import { BulletProvider } from './hooks/useBullets.jsx';
 
 export default function App() {
   return (
-    <BulletProvider>
-      <Canvas shadows camera={{ fov: 75 }}>
-        <Suspense fallback={null}>
+    <Canvas shadows camera={{ fov: 75 }}>
+      <Suspense fallback={null}>
+        <BulletProvider>
           <color attach="background" args={[0.6, 0.7, 0.9]} />
           <ambientLight intensity={0.5} />
           <pointLight position={[10, 10, 5]} />
@@ -19,8 +19,8 @@ export default function App() {
           <Player />
           <Gun />
           <Bullets />
-        </Suspense>
-      </Canvas>
-    </BulletProvider>
+        </BulletProvider>
+      </Suspense>
+    </Canvas>
   );
 }
