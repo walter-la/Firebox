@@ -1,5 +1,5 @@
 import React from 'react';
-import { useBullets } from '../hooks/useBullets.js';
+import { useBullets } from '../hooks/useBullets.jsx';
 
 export default function Bullets() {
   const { bullets } = useBullets();

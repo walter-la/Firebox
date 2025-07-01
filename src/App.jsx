@@ -5,7 +5,7 @@ import Environment from './components/Environment.jsx';
 import Player from './components/Player.jsx';
 import Gun from './components/Gun.jsx';
 import Bullets from './components/Bullets.jsx';
-import { BulletProvider } from './hooks/useBullets.js';
+import { BulletProvider } from './hooks/useBullets.jsx';
 
 export default function App() {
   return (

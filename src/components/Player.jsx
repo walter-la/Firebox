@@ -1,8 +1,8 @@
 import React, { useRef, useEffect } from 'react';
-import { PointerLockControls, useThree } from '@react-three/drei';
-import { useFrame } from '@react-three/fiber';
+import { PointerLockControls } from '@react-three/drei';
+import { useFrame, useThree } from '@react-three/fiber';
 import { usePlayerControls } from '../hooks/usePlayerControls.js';
-import { useBullets } from '../hooks/useBullets.js';
+import { useBullets } from '../hooks/useBullets.jsx';
 
 export default function Player() {
   const controlsRef = useRef();
