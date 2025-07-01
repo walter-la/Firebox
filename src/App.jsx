@@ -1,6 +1,8 @@
 import React from 'react';
 import { Canvas } from '@react-three/fiber';
 import { Suspense } from 'react';
+import { Html } from '@react-three/drei';
+import TouchControls from './components/TouchControls.jsx';
 import Environment from './components/Environment.jsx';
 import Player from './components/Player.jsx';
 import Gun from './components/Gun.jsx';
@@ -23,6 +25,9 @@ export default function App() {
           <Player />
           <Gun />
           <Bullets />
+          <Html fullscreen>
+            <TouchControls />
+          </Html>
         </BulletProvider>
       </Suspense>
     </Canvas>
