@@ -2,7 +2,7 @@ import React, { createContext, useContext, useState, useRef } from 'react';
 import { useFrame, useThree } from '@react-three/fiber';
 import * as THREE from 'three';
 
-const BulletContext = createContext();
+export const BulletContext = createContext();
 
 export function BulletProvider({ children }) {
   const [bullets, setBullets] = useState([]);
