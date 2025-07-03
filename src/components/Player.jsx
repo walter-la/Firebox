@@ -9,6 +9,9 @@ export default function Player() {
   const { camera } = useThree();
   const keys = usePlayerControls();
   const { shoot } = useBullets();
+  useEffect(() => {
+    console.log('Player mounted');
+  }, []);
 
   // Set initial camera height for a more natural viewpoint
   useEffect(() => {

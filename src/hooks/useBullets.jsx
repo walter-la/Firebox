@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useRef } from 'react';
+import React, { createContext, useContext, useState, useRef, useEffect } from 'react';
 import { useFrame, useThree } from '@react-three/fiber';
 import * as THREE from 'three';
 
@@ -7,6 +7,10 @@ export const BulletContext = createContext();
 export function BulletProvider({ children }) {
   const [bullets, setBullets] = useState([]);
   const { camera, scene } = useThree();
+
+  useEffect(() => {
+    console.log('BulletProvider mounted');
+  }, []);
 
   useFrame((state, delta) => {
     setBullets((bs) =>
@@ -17,6 +21,7 @@ export function BulletProvider({ children }) {
   });
 
   const shoot = () => {
+    console.log('shoot() invoked');
     const dir = new THREE.Vector3();
     camera.getWorldDirection(dir);
     const origin = camera.position.clone();
