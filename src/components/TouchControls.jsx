@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { useBullets } from '../hooks/useBullets.jsx';
 
 const keyMap = {
@@ -13,6 +13,10 @@ export default function TouchControls() {
   const joyRef = useRef();
   const stickRef = useRef();
   const [state, setState] = useState({});
+
+  useEffect(() => {
+    console.log('TouchControls mounted', { hasShoot: typeof shoot === 'function' });
+  }, [shoot]);
 
   const threshold = 15; // pixels
 
@@ -66,6 +70,7 @@ export default function TouchControls() {
         className="fire-btn"
         onTouchStart={(e) => {
           e.preventDefault();
+          console.log('Fire button touched');
           shoot();
         }}
       />

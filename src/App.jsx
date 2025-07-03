@@ -11,6 +11,7 @@ import { BulletProvider, BulletContext } from './hooks/useBullets.jsx';
 
 function Scene() {
   const ContextBridge = useContextBridge(BulletContext);
+  console.log('Rendering Scene with TouchControls');
   return (
     <BulletProvider>
       <color attach="background" args={[0.6, 0.7, 0.9]} />
