@@ -9,11 +9,11 @@ import Gun from './components/Gun.jsx';
 import Bullets from './components/Bullets.jsx';
 import { BulletProvider, BulletContext } from './hooks/useBullets.jsx';
 
-function SceneWithBridge() {
+function Scene() {
   const ContextBridge = useContextBridge(BulletContext);
   console.log('Rendering Scene with TouchControls');
   return (
-    <>
+    <BulletProvider>
       <color attach="background" args={[0.6, 0.7, 0.9]} />
       <ambientLight intensity={0.5} />
       <pointLight position={[10, 10, 5]} />
@@ -26,14 +26,6 @@ function SceneWithBridge() {
           <TouchControls />
         </Html>
       </ContextBridge>
-    </>
-  );
-}
-
-function Scene() {
-  return (
-    <BulletProvider>
-      <SceneWithBridge />
     </BulletProvider>
   );
 }
